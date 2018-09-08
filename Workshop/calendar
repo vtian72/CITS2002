@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define default_year 2018
+#define default_month 8
+
+int main(int argc, char *argv[]){
+
+
+      int year = default_year;
+      int month = default_month;
+      int day1 = 3;
+      int days_in_month = 0;
+
+      if(argc == 2){
+            month = atoi(argv[1]);
+      }
+      if(argc == 3){
+            month = atoi(argv[1]);
+            year = atoi(argv[2]);
+      }
+
+      switch(month){
+      case 4 : printf("    April %i\n", year);
+                 days_in_month = 30;
+                 break;
+
+      case 8 : printf("    August %i\n", year);
+                 days_in_month = 31;
+                 break;
+      }
+
+      printf("Su Mo Tu We Th Fr Sa\n");
+
+      int day = 1 - day1;
+
+      for(int w = 1; w <= 6; w++){
+        for(int c = 1; c <= 7; c++){
+              if((day < 1) || (day >  days_in_month)){
+                  printf("   ");
+              }
+              else{
+                  printf("%2i ", day);
+              }
+              day++;
+        }
+        printf("\n");
+        if((day >  days_in_month)){
+          break;
+        }
+      }
+      exit(EXIT_SUCCESS);
+}
