@@ -1,3 +1,4 @@
+//Create a deck of cards and envoke various functions such as print_cards and shuffle_cards
 #include <stdlib.h>
 #include <stdio.h>
 
