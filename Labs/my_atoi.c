@@ -1,3 +1,4 @@
+//Writing our own atoi function to convert a string into an int
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
